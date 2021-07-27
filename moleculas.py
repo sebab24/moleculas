@@ -11,6 +11,8 @@ flechas = modifica velocidad
 z/x = encoge/agranda tamano marco rebote  
 e/r = desactiva/activa rebote
 
+p = pausa
+q= quit
 '''
 
 from random import randint
