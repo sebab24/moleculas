@@ -38,6 +38,8 @@ sebabucc24@gmail.com
 
 
 Proxima idea: agregar una zona carga +, y carga - y hacer electrolisis
+
+
 Proxima idea: en BLENDER-python, simular/visualizar movimientos/moleculas en 3d. 
 
 
