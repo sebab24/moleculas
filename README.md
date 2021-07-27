@@ -28,11 +28,13 @@ Cbro=0.01   # Coef movimiento Browniano
 Resultados: 
 Segun valores de Croc, Cbro 
 se forman "moleculas"; 
-H2O (Agua), CH4(metano), HCN(Cianuro), 
-y a veces cadenas de C, anillos, de 5, 6 C, 
+H2O (Agua), CH4(metano), HCN(Cianuro), NH3(amoniaco)
+a veces cadenas de C, anillos, de 5, 6 C, 
 
 
-se forman moleculas tiícas que se han forman y flotan en el espacio.
+
+
+aparecen moléculas típicas que se han forman y flotan en el espacio!
 
 sebabucc24@gmail.com
 
