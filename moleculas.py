@@ -2,9 +2,7 @@
 '''COMANDOS
 
 
-
 n/m= zoom +1/-1
-
 
 w, s, a, d = desplaza, x, y 
 
@@ -20,12 +18,7 @@ from random import randint
 import numpy as np 
 import pygame
 import time
-
-
-
 import os
-#from os import listdir
-#from os.path import isfile, isdir
 
 
 pygame.init()
@@ -33,7 +26,7 @@ pygame.init()
 #CONSTANTES
 
 
-# Define some colors
+# Colores
 
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
@@ -55,9 +48,6 @@ screen = pygame.display.set_mode(size)
 
 
 pygame.mouse.set_visible(False)
-
-
-
 
 
 # INICIA LISTAS DE OBJETOS
@@ -117,8 +107,7 @@ class BOLA():
 		self.carga=carga
 		
 		self.color=color
-		
-		
+				
 		self.tamano=self.masa
 		
 
@@ -135,10 +124,7 @@ for i in range(oxigeno):
 	Yvelinicial=randint(-10,10)/factorvelocidad
 
 	Lb.append(BOLA(Xinicial,Yinicial,Xvelinicial,Yvelinicial, masaoxigeno, cargaoxigeno, BLUE))
-#Lb.append(Planeta)
 
-# BOLA (x, y, xvel, yvel, masa, carga, color)
-#hidrogeno
 
 for i in range(hidrogeno):
 	Xinicial=randint(centro[0]-ancho*marco,centro[0]+ancho*marco)
@@ -170,9 +156,9 @@ for i in range(nitrogeno):
 
 
 def PAUSA():
-	#global TOPISIMOtext 
+	
 	global fuente
-	#global posicion
+
 	pygame.mixer.pause()
 	while True:
 		
@@ -205,17 +191,12 @@ def CARTEL(texto, posicion, tamano, color):
 	screen.blit(mensaje, posicion)
 
 
-# def AJUSTECENTROMASA(Lb):
-# 	for i in range(len(Lb)):
-# 		CMvelx=
-
 
 def DISTANCIA(Lb,i,j):
 	r= np.sqrt((Lb[i].x-Lb[j].x)**2+((Lb[i].y-Lb[j].y)**2))
 	return r
 	
-	
-	
+
 	
 def Felectrica(Lb,i,j):
 	if i!=j:
@@ -287,7 +268,7 @@ def main():
 	global marco
 
 
-# ::::::::::::::::::::::LOOP PRINCIPAL _____________________________________	
+# ::::::LOOP PRINCIPAL ___________
 	
 	while True:
 			
@@ -374,9 +355,6 @@ def main():
 				Lb[i].y=My
 
 
-
-
-
 	# REBOTA BOLAS	
 		if keys[pygame.K_e]:
 			activarebote=False
@@ -429,52 +407,12 @@ def main():
 			pygame.draw.circle(screen, Lb[i].color,[Xzoom+corrX, Yzoom+corrY], Tzoom, 1)
 		
 		
-			
 		
 	### CARTELES TEXTOS_______________________________________________
 		mouse=[Mx,My]
-		#CARTEL(str(mouse),[100,200],30,WHITE)
-		#CARTEL(str(fuercita),[100,200],30,WHITE)
-		#CARTEL(TEXTOREBOTE,[100,100],20,WHITE)
-			
-	
-		
-		
-	
-		
-	
-
 
   # MOVIMIENTOS______________________ 
-		
-
-
-
-		
-# '''				
-# # EVENTOS MOUSE_____________
 	
-	# #BOTON ON OFF ___________________________
-			
-		# if DENTROBOTON(BOTON_ON):
-			# TEXTOcartel='ACTIVASTE = BOTON ON'
-			# estadoplay=True
-			# BOTONCLICK.play()
-			# #tortaactiva=[220, 260, 20, 20]
-			# on_off=[290, 20, 130, 50]
-			
-			
-		
-		# if DENTROBOTON(BOTON_OFF):
-			# TEXTOcartel='ACTIVASTE = BOTON OFF'
-			# BOTONCLICK.play()
-			# on_off=[290, 75, 130, 55]
-			# #exit()
-# '''		    	
-			
-		
-#___________________________________________________		
-		
 		clock.tick(500)
 		
 		pygame.display.flip()
@@ -495,158 +433,3 @@ def main():
 if __name__ == '__main__':
 	main()
 
-
-
-
-
-
-
-
-
-
-
-'''
-
-
-
-  # ___________ CODIGO PARA LEER ARCHIVOS DE CARPETA 
-import os
-from os import listdir
-from os.path import isfile, isdir
-
-def LISTADO(path):    
-    return [obj for obj in listdir(path) if isfile(path + obj)]
-
-
-
-# PATH =  os.getcwd()
-# #print(f'la carpeta es {os.getcwd()}')
-
-# PATH+='/'
-
-# #PATH='/home/seba/Documents/SEBA/24/PDFVOZ/'
-# lista= LISTADO(PATH)
-# LIST=""
-# for lista in lista:
-	# LIST+=lista+ '\n'	
-
-
-   # FIN ________________________
-   
-   
-   
-   
-   
-   
-
-	# -------- LALA ---------------------
-	# LALAimagen='IMAGENES/LALA4.png'
-	# LALA = pygame.image.load(LALAimagen)
-	# LALA = pygame.transform.scale(LALA, (50,60))
-	
-	# # LALA :  Posicion  / Velocidad inicial
-	# LALA_x=100
-	# LALA_y=200
-	
-	# LALAvel_x=0.1
-	# LALAvel_y=0.1 
-	
-	
-EVENTOS CON MOUSE
-		if DENTROBOTON(TORTA1) :
-			BOTONCLICK.play()
-			TEXTOcartel='ACTIVASTE = TORTA 1'
-			tortaactiva=[TORTA1[0][0], TORTA1[0][1], 200, 60]
-			#imagenfondo=TORTA1imagen
-			#screen.blit(TORTA1_INVimagen, TORTA1[0])
-					
-		if DENTROBOTON(TORTA2) :
-			BOTONCLICK.play()
-			#time.sleep(0.1)
-			TEXTOcartel='ACTIVASTE = TORTA 2'
-			tortaactiva=[TORTA2[0][0], TORTA2[0][1], 200, 60]
-			#screen.blit(TORTA2_INVimagen, [100,100])
-			
-			
-		
-		if DENTROBOTON(TORTA3) :
-			BOTONCLICK.play()
-			#time.sleep(0.1)
-			TEXTOcartel='ACTIVASTE = TORTA 3'
-			tortaactiva=[TORTA3[0][0], TORTA3[0][1], 200, 60]
-			#screen.blit(TORTA2_INVimagen, [100,100])
-		
-		if DENTROBOTON(TORTA4) :
-			BOTONCLICK.play()
-			#time.sleep(0.1)
-			TEXTOcartel='ACTIVASTE = TORTA 4'
-			tortaactiva=[TORTA4[0][0], TORTA4[0][1], 200, 60]
-			#screen.blit(TORTA2_INVimagen, [100,100])
-		
-		if DENTROBOTON(TORTA5) :
-			BOTONCLICK.play()
-			#time.sleep(0.1)
-			TEXTOcartel='ACTIVASTE = TORTA 5'
-			tortaactiva=[TORTA5[0][0], TORTA5[0][1], 200, 60]
-			#screen.blit(TORTA2_INVimagen, [100,100])
-		
-
-
-def CAMBIARFONDO(archivoimagen):
-	global imagenfondo
-	imagenfondo = pygame.image.load(archivoimagen)
-	imagenfondo = pygame.transform.scale(imagenfondo, size)
-	screen.blit(imagenfondo, imagenfondo_pos)
-	
-	
-
-# RELOJ ----------
-	segundos+=0.005
-	if int(segundos)==60:
-		minutos+=1
-		segundos=0
-	RELOJ=f'{minutos}:{int(segundos)}'
-	hora = fuente.render(str(RELOJ), 1, (0,0,0))
-	screen.blit(hora, (530, 90))
-	#------------------	
-	
-	
-	
-i+=1
-		if (i % 2) ==0:
-			pygame.mixer.pause()
-			BOTONCLICK.play()
-			estadopause=True
-		else:
-			screen.blit(PAUSEOFF, imagenfondo_pos)
-			pygame.mixer.unpause()
-			BOTONCLICK.play()
-			estadopause=False
-
-
-
-# BLIT -------	
-	
-	# SOL_pos=[SOL_x,SOL_y]
-	# if P=='base' or P=='mundo-derecho' or P=='mundo-izquierdo':screen.blit(SOL,SOL_pos)
-	
-	# LALA_pos=[LALA_x,LALA_y]
-	# screen.blit(LALA,LALA_pos)
-
-	# CONEJO_y= 500+20*np.sin(CONEJO_x/15)
-	# CONEJO_pos=[CONEJO_x,CONEJO_y]
-	# if P=='casa2':
-		# if CONEJOvel_x>0:
-			# screen.blit(CONEJO,CONEJO_pos)
-		# else:
-			# screen.blit(LCONEJO,CONEJO_pos)
-	
-			
-	
-	# Draw the rectangle
-	#pygame.draw.rect(screen, WHITE, [rect_x, rect_y, 50, 50])
-	#pygame.draw.rect(screen, RED, [rect_x + 10, rect_y + 10, 30, 30])
-	
-	
-	
-'''
