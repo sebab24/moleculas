@@ -34,7 +34,6 @@ y a veces cadenas de C, anillos, de 5, 6 C,
 
 se aparecen moléculas típicas que se han forman y flotan en el espacio.
 
-seba24computacion@gmail.com
 
 
 Proxima idea: agregar una zona carga +, y carga - y hacer electrolisis
